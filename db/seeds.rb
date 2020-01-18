@@ -8,3 +8,6 @@ ingredients = ingredients_json["drinks"]
 ingredients.each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
+
+
+
