@@ -10,9 +10,33 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="cool-background">
+  <%# Navbar %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to cocktails_path, class: "navbar-brand" do %>
+      <%= image_tag "cocktails.png" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+      <%= yield %>
+  <%# Footer %>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github" style="color: #E67700;"></i></a>
+        <a href="#"><i class="fab fa-instagram" style="color: #E67700;"></i></a>
+        <a href="#"><i class="fab fa-facebook" style="color: #E67700;"></i></a>
+        <a href="#"><i class="fab fa-twitter" style="color: #E67700;"></i></a>
+        <a href="#"><i class="fab fa-linkedin" style="color: #E67700;"></i></a>
+      </div>
+    </div>
+    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
 </html>

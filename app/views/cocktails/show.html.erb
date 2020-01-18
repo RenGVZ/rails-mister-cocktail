@@ -1,0 +1,27 @@
+ <div class="container">
+  <div class= "card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h1 class="text-center" style="color: white;"><%= @cocktail.name %></h1>
+    <div class="d-flex flex-column">
+      <h3 class="text-center" style="color: white;">Ingredients</h3>
+      <% @cocktail.doses.each do |dose| %> 
+        <p class="text-center" style="color: white;"><%= dose.description %> of </p>
+      <% end %>
+      <% @cocktail.ingredients.each do |ingredient| %>
+          <p style="color: white;"><%= ingredient.name %></p>
+      <% end %>
+    </div>  
+
+
+  </div>  
+    <ul>Ingredients:
+      <% @cocktail.ingredients.each do |ingredient| %>
+        <li style="color: white;"><%= ingredient.name %></li>
+      <% end %>
+    </ul> 
+</div>  
+  
+
+<%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-warning m-3"  %>
+
+  
+  
