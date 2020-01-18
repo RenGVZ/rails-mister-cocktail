@@ -1,7 +1,8 @@
 <%= simple_form_for @cocktail do |f| %>
-  <div class="form-group">
+  <div class="form-group" style="color: white;">
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
   </div>
-    <%= f.submit "Add an ingredient", class: "btn btn-primary" %>
+    <%= f.submit "Add an ingredient", class: "btn btn-flat m-3" %>
 <% end %>
 
