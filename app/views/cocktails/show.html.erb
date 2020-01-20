@@ -1,27 +1,22 @@
- <div class="cocktail">
-  <div class= "cocktail-display" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 500, width: 600, crop: :fill %>')">
+ <div class="cocktail d-flex justify-content-center">
+  <div class= "cocktail-display" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 500, width: 600, crop: :fill %>')">
     <h1 class="text-center" style="color: white;"><%= @cocktail.name %></h1>
-    <div class="d-flex flex-column">
-      <h3 class="text-center" style="color: white;">Ingredients</h3>
+    <div>
+      <h3 class="text-center" style="color: white;">Ingredients:</h3>
       <% @cocktail.doses.each do |dose| %> 
-        <p class="text-center" style="color: white;"><%= dose.description %> of </p>
+        <p class="text-center" style="color: white;">
+        <%= dose.description %> of 
+        <% @cocktail.ingredients.each do |ingredient| %>
+            <%= ingredient.name %>
+        <% end %>
       <% end %>
-      <% @cocktail.ingredients.each do |ingredient| %>
-          <p style="color: white;"><%= ingredient.name %></p>
-      <% end %>
+
+      <div class="d-flex justify-content-center">
+        <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-warning m-3"  %>
+      </div>
     </div>  
-
-
-  </div>  
-    <ul>Ingredients:
-      <% @cocktail.ingredients.each do |ingredient| %>
-        <li style="color: white;"><%= ingredient.name %></li>
-      <% end %>
-    </ul> 
-</div>  
-  
-
-<%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-warning m-3"  %>
+  </div>
+</div>
 
   
   
