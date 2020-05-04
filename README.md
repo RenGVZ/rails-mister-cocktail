@@ -1,24 +1,3 @@
-# README
+Mister Cocktai is an app where you can create and archive your favorite cocktails! It's also possible to add the cocktail's ingredients so you never forget how to make the perfect one. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Developed in 3 days using Ruby on Rails.
